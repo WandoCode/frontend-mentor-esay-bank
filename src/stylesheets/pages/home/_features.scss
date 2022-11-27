@@ -1,12 +1,9 @@
 @use '../../abstracts/' as *;
 
 .features {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: rem(55);
 
-  padding-inline: $padding-mobile;
+  padding-bottom: rem(66);
 
   background-color: var(--clr-neutral-300);
 

@@ -1,3 +1,38 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+@use '../abstracts/' as *;
+
+.footer {
+  $gap-flow: rem(35);
+
+  background-color: var(--clr-primary-800);
+
+  display: grid;
+  justify-items: center;
+  padding-block: $gap-flow;
+  gap: $gap-flow;
+
+  &__logo {
+    margin-inline: auto;
+  }
+  & .links {
+    display: flex;
+    gap: rem(15);
+    margin-top: $gap-flow;
+    &__item img {
+      width: rem(23);
+    }
+  }
+
+  &__column {
+    &--big {
+      display: grid;
+      justify-items: center;
+    }
+  }
+
+  & .copyright {
+    margin-top: $gap-flow;
+  }
+}

@@ -28,11 +28,6 @@ body {
   margin-inline: auto;
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  gap: rem(88);
-}
 /**
  * Basic styles for links
  */
@@ -44,4 +39,10 @@ a {
     color: var(--clr-primary-500);
     text-decoration: underline;
   }
+}
+
+section {
+  display: grid;
+  padding-inline: $padding-mobile;
+  margin-bottom: $flow-mobile;
 }

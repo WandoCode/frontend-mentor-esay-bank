@@ -1,0 +1,9 @@
+@use '../../abstracts/' as *;
+
+.latest-articles {
+  gap: rem(30);
+  & .articles {
+    display: grid;
+    gap: rem(25);
+  }
+}
