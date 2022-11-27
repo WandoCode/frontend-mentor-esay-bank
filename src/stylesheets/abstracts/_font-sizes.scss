@@ -19,6 +19,12 @@ $scale: (
   ),
 );
 
+$weights: (
+  light: 300,
+  normal: 400,
+  bold: 700,
+);
+
 :root {
   /// Build css custom variables for font-size
   /// It integer a media query for each font (mobile-first)
@@ -38,5 +44,9 @@ $scale: (
         }
       }
     }
+  }
+
+  @each $name, $value in $weights {
+    --fw-#{$name}: #{$value};
   }
 }

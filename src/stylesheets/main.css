@@ -1,9 +1,11 @@
 :root {
-  --clr-primary-100: hsl(339deg, 100%, 80%);
-  --clr-primary-200: hsl(339deg, 100%, 65%);
-  --clr-primary-300: hsl(339deg, 100%, 50%);
-  --clr-primary-400: hsl(339deg, 100%, 35%);
-  --clr-primary-500: hsl(339deg, 100%, 20%);
+  --clr-primary-200: hsl(192deg, 70%, 51%);
+  --clr-primary-300: hsl(136deg, 65%, 51%);
+  --clr-primary-900: hsl(233deg, 26%, 24%);
+  --clr-neutral-100: hsl(0deg, 0%, 100%);
+  --clr-neutral-200: hsl(0deg, 0%, 98%);
+  --clr-neutral-300: hsl(220deg, 16%, 96%);
+  --clr-neutral-400: hsl(233deg, 8%, 62%);
 }
 
 :root {
@@ -13,6 +15,9 @@
   --fs-600: 1.953rem;
   --fs-700: 2.441rem;
   --fs-800: 3.052rem;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 700;
 }
 @media (min-width: 20em) {
   :root {
@@ -62,14 +67,16 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
   margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul,
+ol {
   list-style: none;
+  padding: 0;
 }
 
 /* Set core root defaults */
@@ -157,7 +164,7 @@ a:hover, a:active, a:focus, a:focus-within {
  */
 body {
   color: var(--clr-primary-400);
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: normal 125%/1.4 "Public Sans", sans-serif;
 }
 
 .button {
