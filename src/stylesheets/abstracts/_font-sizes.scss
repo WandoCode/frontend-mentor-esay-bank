@@ -1,21 +1,22 @@
 @use './mixins' as *;
+@use './functions' as *;
 
 $scale: (
-  small: (
-    300: 1rem,
-    400: 1.125rem,
-    500: 1.563rem,
+  sm: (
+    300: rem(14),
+    400: rem(15),
+    500: rem(19),
     600: 1.953rem,
-    700: 2.441rem,
-    800: 3.052rem,
+    700: rem(32),
+    800: rem(42),
   ),
-  large: (
-    300: 1rem,
-    400: 1.425rem,
+  lg: (
+    300: rem(16),
+    400: rem(18),
     500: 2rem,
     600: 2.827rem,
-    700: 4rem,
-    800: 3.052rem,
+    700: rem(35),
+    800: rem(50),
   ),
 );
 
@@ -32,17 +33,8 @@ $weights: (
   /// ==> clamp(valFixMinEnREM, valFixEnREMPlusValEnVW, valFixMaxEnREM)
   /// ==> valFixMinEnREM sont les valeur pour 'small' et valFixMaxEnREM sont les valeurs pour 'large'
   @each $screen-size, $font-size in $scale {
-    @if $screen-size == small {
-      @each $size, $value in $font-size {
-        --fs-#{$size}: #{$value};
-      }
-    } @else {
-      @each $size, $value in $font-size {
-        // Includes a media-query to make font bigger above de 'small' breakpoint
-        @include breakpoint(small) {
-          --fs-#{$size}: #{$value};
-        }
-      }
+    @each $size, $value in $font-size {
+      --fs-#{$screen-size}-#{$size}: #{$value};
     }
   }
 

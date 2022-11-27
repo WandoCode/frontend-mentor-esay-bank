@@ -1,0 +1,25 @@
+@use '../../abstracts/' as *;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(55);
+
+  padding-inline: $padding-mobile;
+
+  background-color: var(--clr-neutral-300);
+
+  &__titles {
+    margin-top: rem(62);
+    display: grid;
+    gap: rem(16);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(33);
+  }
+}

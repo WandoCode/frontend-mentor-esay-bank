@@ -1,3 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+@use '../abstracts/' as *;
+
+.header {
+  min-height: rem(64);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: rem(24) rem(18);
+
+  background-color: var(--clr-neutral-100);
+}

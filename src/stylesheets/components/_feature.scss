@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+.feature {
+  display: grid;
+  justify-items: center;
+  gap: rem(25);
+
+  &__text {
+    margin-top: rem(-8);
+  }
+}

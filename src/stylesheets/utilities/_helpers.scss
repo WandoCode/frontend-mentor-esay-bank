@@ -45,3 +45,28 @@
   position: absolute;
   width: 1px;
 }
+
+// Show content only for large screens
+.show-desktop {
+  display: none;
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
+// Hide content only for large screens
+.hide-desktop {
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+.even-columns {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+}
+
+.txt-center {
+  text-align: center;
+}
