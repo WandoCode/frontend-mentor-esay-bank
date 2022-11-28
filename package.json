@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "webpack serve --open",
     "watch": "webpack --watch",
-    "build": "webpack",
+    "build": "sass src/stylesheets/main.scss dist/main.css && webpack",
     "build:sass": "sass src/stylesheets/main.scss dist/main.css"
   },
   "author": "",
