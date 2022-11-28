@@ -5,10 +5,10 @@ const menu = document.querySelector('.nav')
 const header = document.querySelector('header')
 
 const headerHeight = header.offsetHeight
-menu.style.top = headerHeight + 'px'
 
 const toggleMenu = (e) => {
   e.preventDefault()
+  menu.style.top = headerHeight + 'px'
   btnMenu.toggleAttribute('open')
 }
 

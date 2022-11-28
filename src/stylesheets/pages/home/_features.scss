@@ -7,10 +7,25 @@
 
   background-color: var(--clr-neutral-300);
 
+  @include breakpoint(large) {
+    gap: rem(70);
+
+    padding-bottom: rem(105);
+  }
+
   &__titles {
-    margin-top: rem(62);
     display: grid;
     gap: rem(16);
+
+    margin-top: rem(62);
+
+    @include breakpoint(large) {
+      max-width: 55%;
+
+      gap: rem(24);
+
+      margin-top: rem(20);
+    }
   }
 
   &__list {
@@ -18,5 +33,15 @@
     flex-direction: column;
     align-items: center;
     gap: rem(33);
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include breakpoint(large) {
+      flex-wrap: nowrap;
+      gap: rem(30);
+    }
   }
 }

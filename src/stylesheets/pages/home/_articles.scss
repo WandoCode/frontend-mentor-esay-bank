@@ -2,8 +2,23 @@
 
 .latest-articles {
   gap: rem(30);
+
+  @include breakpoint(large) {
+    gap: rem(50);
+
+    margin-bottom: rem(97);
+  }
+
   & .articles {
     display: grid;
     gap: rem(25);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

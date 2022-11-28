@@ -1,25 +1,80 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
 @use '../abstracts/' as *;
 
-.footer {
-  $gap-flow: rem(35);
+$gap-flow: rem(35);
 
+@include breakpoint(large) {
+  $gap-flow: 0;
+}
+
+.footer {
   background-color: var(--clr-primary-800);
 
-  display: grid;
-  justify-items: center;
-  padding-block: $gap-flow;
-  gap: $gap-flow;
+  &__container {
+    display: grid;
+    justify-items: center;
+    gap: $gap-flow;
+
+    padding-block: $gap-flow;
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: start;
+
+      max-width: $max-width;
+
+      margin-inline: auto;
+      padding-inline: $padding-desktop;
+      padding-block: rem(50);
+    }
+  }
+
+  &__column {
+    display: grid;
+
+    &:first-child {
+      @include breakpoint(large) {
+        justify-self: start;
+      }
+    }
+
+    &:last-child {
+      @include breakpoint(large) {
+        justify-self: end;
+      }
+
+      & > * {
+        justify-self: center;
+
+        @include breakpoint(large) {
+          justify-self: end;
+        }
+      }
+    }
+
+    &--big {
+      @include breakpoint(large) {
+        grid-column: span 2;
+      }
+    }
+  }
 
   &__logo {
     margin-inline: auto;
+
+    @include breakpoint(large) {
+      margin: 0;
+    }
   }
+
   & .links {
     display: flex;
     gap: rem(15);
     margin-top: $gap-flow;
+
+    @include breakpoint(large) {
+      gap: rem(10);
+    }
+
     &__img {
       @include on-event {
         filter: brightness(0) saturate(100%) invert(69%) sepia(36%)
@@ -29,13 +84,6 @@
 
     &__item img {
       width: rem(23);
-    }
-  }
-
-  &__column {
-    &--big {
-      display: grid;
-      justify-items: center;
     }
   }
 

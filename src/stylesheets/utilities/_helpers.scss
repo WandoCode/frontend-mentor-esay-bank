@@ -49,14 +49,14 @@
 // Show content only for large screens
 .show-desktop {
   display: none;
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     display: block;
   }
 }
 
 // Hide content only for large screens
 .hide-desktop {
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     display: none;
   }
 }
@@ -65,8 +65,15 @@
   display: grid;
   grid-auto-columns: auto;
   grid-auto-rows: auto;
+
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'column-1  column-2';
+  }
 }
 
-.txt-center {
-  text-align: center;
+.txt-center-mobile {
+  @include breakpoint-down(large) {
+    text-align: center;
+  }
 }

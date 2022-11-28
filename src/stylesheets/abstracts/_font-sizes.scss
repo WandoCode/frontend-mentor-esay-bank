@@ -2,7 +2,7 @@
 @use './functions' as *;
 
 $scale: (
-  sm: (
+  medium: (
     100: rem(10),
     200: rem(12.5),
     300: rem(14),
@@ -12,13 +12,15 @@ $scale: (
     700: rem(32),
     800: rem(42),
   ),
-  lg: (
-    300: rem(16),
-    400: rem(18),
-    500: 2rem,
+  large: (
+    100: rem(10),
+    200: rem(13),
+    300: rem(15),
+    400: rem(17),
+    500: rem(23),
     600: 2.827rem,
-    700: rem(35),
-    800: rem(50),
+    700: rem(39),
+    800: rem(57),
   ),
 );
 
@@ -31,12 +33,17 @@ $weights: (
 :root {
   /// Build css custom variables for font-size
   /// It integer a media query for each font (mobile-first)
-  /// Une autre solution serait d'utiliser clamp()
-  /// ==> clamp(valFixMinEnREM, valFixEnREMPlusValEnVW, valFixMaxEnREM)
-  /// ==> valFixMinEnREM sont les valeur pour 'small' et valFixMaxEnREM sont les valeurs pour 'large'
   @each $screen-size, $font-size in $scale {
-    @each $size, $value in $font-size {
-      --fs-#{$screen-size}-#{$size}: #{$value};
+    @if $screen-size == 'medium' {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else {
+      @include breakpoint(large) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
     }
   }
 

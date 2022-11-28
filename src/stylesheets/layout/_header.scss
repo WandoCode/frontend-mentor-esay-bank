@@ -1,18 +1,33 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
 @use '../abstracts/' as *;
 
 .header {
   position: sticky;
   top: 0;
   z-index: 1;
-  min-height: rem(64);
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: rem(24) rem(18);
 
   background-color: var(--clr-neutral-100);
+  box-shadow: 0 -9px 15px 0px var(--clr-primary-800);
+
+  @include breakpoint(large) {
+    box-shadow: none;
+  }
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: $min-height-header;
+    max-width: $max-width;
+
+    padding-inline: $padding-desktop;
+
+    @include breakpoint-down(large) {
+      justify-content: space-between;
+
+      min-height: rem(64);
+
+      padding-inline: rem(24) rem(18);
+    }
+  }
 }

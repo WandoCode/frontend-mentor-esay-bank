@@ -7,10 +7,14 @@ $text-font-stack: 'Public Sans', sans-serif;
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
   'Monaco', monospace !default;
 
-$body-max-width: rem(1440);
-
 $padding-mobile: 1.5rem;
 $flow-mobile: rem(88);
+$flow-desktop: rem(90);
 
-/// Container's maximum width
-$max-width: rem(1180);
+$max-width: rem(1440);
+
+$min-height-header: rem(80);
+$padding-desktop: clamp(1.5rem, 23vw - 10rem, rem(165));
+
+$hero-height-sm: rem(300);
+$hero-height-lg: rem(650);

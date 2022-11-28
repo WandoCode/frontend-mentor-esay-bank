@@ -5,7 +5,23 @@
   justify-items: center;
   gap: rem(25);
 
+  @include breakpoint(medium) {
+    flex-basis: 40%;
+    margin-inline: auto;
+  }
+
+  @include breakpoint(large) {
+    justify-items: flex-start;
+    gap: rem(37);
+
+    flex-basis: 25%;
+  }
+
   &__text {
     margin-top: rem(-8);
+
+    @include breakpoint(large) {
+      margin-top: rem(-14);
+    }
   }
 }
