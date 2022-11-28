@@ -9,7 +9,6 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[name][ext]',
-    clean: true,
   },
   devServer: {
     static: './dist',
