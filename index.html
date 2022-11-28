@@ -22,27 +22,6 @@
   <body>
     <header class="header">
       <img class="header__logo" src="./src/assets/logo.svg" alt="logo" />
-      <nav class="primary-nav show-desktop">
-        <ul class="primary-nav__list">
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">Home</a>
-          </li>
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">About</a>
-          </li>
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">Contact</a>
-          </li>
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">Blog</a>
-          </li>
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">Careers</a>
-          </li>
-        </ul>
-      </nav>
-
-      <button class="button button--cta show-desktop">Request Invite</button>
 
       <button class="button button--menu mobile-menu hide-desktop">
         <img
@@ -50,7 +29,34 @@
           src="./src/assets/icon-hamburger.svg"
           alt="Mobile Menu"
         />
+        <img
+          class="mobile-menu__img"
+          src="./src/assets/icon-close.svg"
+          alt="Mobile Menu"
+        />
       </button>
+
+      <nav class="nav show-desktop">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Contact</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Blog</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Careers</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="button button--cta show-desktop">Request Invite</button>
     </header>
 
     <main class="home">
@@ -141,7 +147,7 @@
             <div class="article__wrapper">
               <div class="article__author">By Claire Robinson</div>
               <h3 class="h3 h3--small">
-                Receive money in any currency with no fees
+                <a href="#">Receive money in any currency with no fees</a>
               </h3>
               <p class="article__text">
                 The world is getting smaller and we’re becoming more mobile. So
@@ -158,7 +164,7 @@
             <div class="article__wrapper">
               <div class="article__author">By Wilson Hutton</div>
               <h3 class="h3 h3--small">
-                Treat yourself without worrying about money
+                <a href="#">Treat yourself without worrying about money</a>
               </h3>
               <p class="article__text">
                 Our simple budgeting feature allows you to separate out your
@@ -175,7 +181,7 @@
             <div class="article__wrapper">
               <div class="article__author">By Wilson Hutton</div>
               <h3 class="h3 h3--small">
-                Take your Easybank card wherever you go
+                <a href="#">Take your Easybank card wherever you go</a>
               </h3>
               <p class="article__text">
                 We want you to enjoy your travels. This is why we don’t charge
@@ -192,7 +198,7 @@
             <div class="article__wrapper">
               <div class="article__author">By Claire Robinson</div>
               <h3 class="h3 h3--small">
-                Our invite-only Beta accounts are now live!
+                <a href="#">Our invite-only Beta accounts are now live!</a>
               </h3>
               <p class="article__text">
                 After a lot of hard work by the whole team, we’re excited to

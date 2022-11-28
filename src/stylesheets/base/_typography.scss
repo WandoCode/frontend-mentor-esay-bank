@@ -57,6 +57,10 @@ body {
 }
 
 .nav {
+  &__link {
+    color: var(--clr-primary-800);
+    font-size: var(--fs-sm-500);
+  }
   &--footer {
     color: var(--clr-neutral-400);
   }

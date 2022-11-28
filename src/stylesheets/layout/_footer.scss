@@ -20,6 +20,13 @@
     display: flex;
     gap: rem(15);
     margin-top: $gap-flow;
+    &__img {
+      @include on-event {
+        filter: brightness(0) saturate(100%) invert(69%) sepia(36%)
+          saturate(870%) hue-rotate(81deg) brightness(91%) contrast(93%);
+      }
+    }
+
     &__item img {
       width: rem(23);
     }

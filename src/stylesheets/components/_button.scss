@@ -1,10 +1,12 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
-
 @use '../abstracts/' as *;
 
 .button {
+  $color-1: map-get(map-get($colors, primary), 300);
+  $color-2: map-get(map-get($colors, primary), 200);
+
   border: none;
 
   &--menu {
@@ -12,13 +14,18 @@
   }
 
   &--cta {
-    background: linear-gradient(
-      0.25turn,
-      var(--clr-primary-300),
-      var(--clr-primary-200)
-    );
+    background: linear-gradient(0.25turn, $color-1, $color-2);
 
     border-radius: 10rem;
     padding: rem(12) rem(35);
+  }
+
+  @include on-event {
+    background: linear-gradient(
+      0.25turn,
+      lighten($color-1, 15%),
+      lighten($color-2, 15%)
+    );
+    cursor: pointer;
   }
 }
