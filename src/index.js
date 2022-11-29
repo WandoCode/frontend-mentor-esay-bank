@@ -18,7 +18,9 @@ const closeMenu = (e) => {
 
 const toggleMenu = () => {
   const isExpanded = btnMenu.getAttribute('aria-expanded') === 'true'
+
   menu.style.top = headerHeight + 'px'
+
   btnMenu.toggleAttribute('open')
   btnMenu.setAttribute('aria-expanded', !isExpanded)
 
