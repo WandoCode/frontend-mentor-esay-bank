@@ -17,27 +17,39 @@
       href="./src/assets/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Easybank landing page</title>
+    <title>Easybank landing page</title>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <img class="header__logo" src="./src/assets/logo.svg" alt="logo" />
 
-        <button class="button button--menu mobile-menu hide-desktop">
+        <button
+          class="button button--menu mobile-menu hide-desktop"
+          aria-haspopup="true"
+          aria-controls="menu"
+          id="menu-button"
+          aria-expanded="false"
+        >
           <img
             class="mobile-menu__img"
             src="./src/assets/icon-hamburger.svg"
-            alt="Mobile Menu"
+            alt="Burger Icon"
           />
           <img
             class="mobile-menu__img"
             src="./src/assets/icon-close.svg"
-            alt="Mobile Menu"
+            alt="Cross"
           />
         </button>
 
-        <nav class="nav show-desktop">
+        <nav
+          id="menu"
+          role="menu"
+          class="nav show-desktop"
+          aria-label="Main menu"
+          aria-labelledby="menu-button"
+        >
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link" href="#">Home</a>
